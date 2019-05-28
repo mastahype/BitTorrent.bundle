@@ -46,7 +46,7 @@ def favorites_menu(title):
 
     for id in ids:
         json_url  = SharedCodeService.common.POPCORN_API + '/show/' + id
-        json_data = JSON.ObjectFromURL(json_url, cacheTime=CACHE_1HOUR, headers=SharedCodeService.common.HEADERS)
+        json_data = JSON.ObjectFromURL(json_url, cacheTime=CACHE_1MINUTE, headers=SharedCodeService.common.HEADERS)
 
         if json_data:
             object_container.add(create_tvshow_object(json_data))
